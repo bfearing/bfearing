@@ -307,8 +307,8 @@ export default function Home({ articles }) {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Brandon, an entrepreneurial-minded, design engineer living
             in Asheville, NC. I&apos;m obsessed with the placement of colored
-            pixels, engrossed in the creator economy, and consumed by collecting
-            shiny cardboard.
+            pixels, engrossed in the creator economy, and intrigued by
+            collecting shiny cardboard.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
