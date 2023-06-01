@@ -156,7 +156,7 @@ export default function About() {
                 Follow on GitHub
               </SocialLink>
               <SocialLink
-                href="https://www.linkedin.com/in/brandon-fearing-7b65b04a/"
+                href="https://www.linkedin.com/in/brandonfearing/"
                 icon={LinkedInIcon}
                 className="mt-4"
               >

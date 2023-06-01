@@ -327,7 +327,7 @@ export default function Home({ articles }) {
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://www.linkedin.com/in/brandon-fearing-7b65b04a"
+              href="https://www.linkedin.com/in/brandonfearing"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
