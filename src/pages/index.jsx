@@ -251,7 +251,7 @@ function Photos() {
 
 function LogoCloud() {
   return (
-    <div id="logoCloud" className="bg-black py-10">
+    <div id="logoCloud" className="py-10">
       <Container className="relative">
         <div className="mx-auto overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 before:bg-gradient-to-r before:from-black before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 after:bg-gradient-to-l after:from-black after:to-transparent">
           <div className="animate-marquee mx-auto flex justify-around gap-20 lg:justify-between">
@@ -269,7 +269,7 @@ function LogoCloud() {
             ].map((image, index) => (
               <Image
                 key={index}
-                className="max-h-10 w-auto max-w-fit object-contain"
+                className="max-h-10 w-auto max-w-fit object-contain brightness-0 dark:brightness-100"
                 src={image}
                 alt=""
                 width="auto"

@@ -26,9 +26,9 @@ export default function App({ Component, pageProps, router }) {
           <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
         </div>
       </div> */}
-      <div className="relative flex h-screen flex-col">
+      <div className="relative">
         <Header />
-        <main className="grow">
+        <main>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
         <Footer />

@@ -73,8 +73,10 @@ export default function About() {
                 perfect place for us to live these days.
               </p>
               <p>
-                <span className="font-bold text-white/80">Educationally</span>,
-                I graduated with a B.S. in Industrial and Systems Engineering
+                <span className="font-bold dark:text-white/80">
+                  Educationally
+                </span>
+                , I graduated with a B.S. in Industrial and Systems Engineering
                 from Virginia Tech, as well as minored in Business and
                 Industrial Design. My education laid the foundation for how I
                 perceive, research, and approach problems:{' '}
@@ -83,8 +85,10 @@ export default function About() {
                 <span className="font-bold">process-oriented</span>.
               </p>
               <p>
-                <span className="font-bold text-white/80">Professionally</span>,
-                I&apos;ve worked on a wide-range of projects in several
+                <span className="font-bold dark:text-white/80">
+                  Professionally
+                </span>
+                , I&apos;ve worked on a wide-range of projects in several
                 different industries. I&apos;ve machined pipes for nuclear
                 aircraft carriers and submarines, tested actuarial financial
                 systems, developed nationwide transit mobile applications,
@@ -93,8 +97,8 @@ export default function About() {
                 a few startups along the way.
               </p>
               <p>
-                <span className="font-bold text-white/80">Personally</span>, I
-                enjoy working on micro-saas products in the creator economy
+                <span className="font-bold dark:text-white/80">Personally</span>
+                , I enjoy working on micro-saas products in the creator economy
                 space, getting my hands dirty in my small-but-mighty woodshop,
                 staying active out on the golf course and hockey rink, and
                 collecting a variety of trading cards. I&apos;m also on a
