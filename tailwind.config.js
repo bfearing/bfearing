@@ -3,33 +3,6 @@ module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],
-  extend: {
-    animation: {
-      wiggle: 'wiggle 1s ease-in-out infinite',
-      oscillate: 'oscillate 1s infinite',
-      marquee: 'marquee 50s linear infinite',
-    },
-    keyframes: {
-      wiggle: {
-        '0%, 100%': { transform: 'rotate(-3deg)' },
-        '50%': { transform: 'rotate(3deg)' },
-      },
-      oscillate: {
-        '0%, 100%': {
-          transform: 'translateX(25%)',
-          animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
-        },
-        '50%': {
-          transform: 'translateX(0)',
-          animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
-        },
-      },
-      marquee: {
-        '0%': { transform: 'translate(0, 0)' },
-        '100%': { transform: 'translate(-100%, 0)' },
-      },
-    },
-  },
   theme: {
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
@@ -326,5 +299,35 @@ module.exports = {
         },
       },
     }),
+    extend: {
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        oscillate: 'oscillate 1s infinite',
+        marquee: 'marquee 50s linear infinite',
+      },
+      colors: {
+        twitter: '#1C9BF1',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        oscillate: {
+          '0%, 100%': {
+            transform: 'translateX(25%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateX(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+        },
+        marquee: {
+          '0%': { transform: 'translate(0, 0)' },
+          '100%': { transform: 'translate(-100%, 0)' },
+        },
+      },
+    },
   },
 }
