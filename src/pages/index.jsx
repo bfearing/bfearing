@@ -106,8 +106,8 @@ function Article({ article }) {
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
-    <Link className="p-1 -m-1 group" {...props} target="blank">
-      <Icon className="w-6 h-6 transition fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300 " />
+    <Link className="group -m-1 p-1" {...props} target="_blank">
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300 " />
     </Link>
   )
 }
@@ -116,17 +116,17 @@ function Newsletter() {
   return (
     <form
       action="/thank-you"
-      className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40"
+      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="flex-none w-6 h-6" />
+        <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Stay up to date</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Subscribe to my monthly newsletter for interesting tidbits and post
         recaps, unsubscribe at any time.
       </p>
-      <div className="flex mt-6">
+      <div className="mt-6 flex">
         <input
           type="email"
           placeholder="Email address"
@@ -134,7 +134,7 @@ function Newsletter() {
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-amber-400 dark:focus:ring-amber-400/10 sm:text-sm"
         />
-        <Button type="submit" className="flex-none ml-4">
+        <Button type="submit" className="ml-4 flex-none">
           Join
         </Button>
       </div>
@@ -168,25 +168,25 @@ function Resume() {
   ]
 
   return (
-    <div className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="flex-none w-6 h-6" />
+        <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
-            <div className="relative flex items-center justify-center flex-none w-10 h-10 mt-1 rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={role.logo}
                 alt=""
-                className="rounded-full h-7 w-7"
+                className="h-7 w-7 rounded-full"
                 unoptimized
               />
             </div>
-            <dl className="flex flex-wrap flex-auto gap-x-2">
+            <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
-              <dd className="flex-none w-full text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {role.company}
               </dd>
               <dt className="sr-only">Role</dt>
@@ -212,9 +212,9 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="w-full mt-6 group">
+      <Button href="#" variant="secondary" className="group mt-6 w-full">
         Download CV
-        <ArrowDownIcon className="w-4 h-4 transition stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
   )
@@ -225,7 +225,7 @@ function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
+      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[image1, image2, image3, image4, image5, image6].map(
           (image, imageIndex) => (
             <div
@@ -239,7 +239,7 @@ function Photos() {
                 src={image}
                 alt=""
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="object-cover w-full h-full"
+                className="h-full w-full object-cover"
               />
             </div>
           )
@@ -254,7 +254,7 @@ function LogoCloud() {
     <div id="logoCloud" className="py-10">
       <Container className="relative">
         <div className="mx-auto overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 before:bg-gradient-to-r before:from-black before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 after:bg-gradient-to-l after:from-black after:to-transparent">
-          <div className="flex justify-around gap-20 mx-auto animate-marquee lg:justify-between">
+          <div className="mx-auto flex animate-marquee justify-around gap-20 lg:justify-between">
             {[
               image1,
               image2,
@@ -269,7 +269,7 @@ function LogoCloud() {
             ].map((image, index) => (
               <Image
                 key={index}
-                className="object-contain w-auto max-h-10 max-w-fit brightness-0 dark:brightness-100"
+                className="max-h-10 w-auto max-w-fit object-contain brightness-0 dark:brightness-100"
                 src={image}
                 alt=""
                 width="auto"
@@ -295,8 +295,8 @@ export default function Home({ articles }) {
           name="description"
           content="I'm Brandon, an entrepreneurial-minded, design engineer living
           in Asheville, NC. I'm obsessed with the placement of colored
-          pixels, engrossed in the creator economy, and consumed by collecting
-          shiny cardboard."
+          pixels, engrossed in the creator economy, and fascinated by
+          the collectible trading card market."
         />
       </Head>
       <Container className="mt-9">
@@ -307,17 +307,17 @@ export default function Home({ articles }) {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Brandon, an entrepreneurial-minded, design engineer living
             in Asheville, NC. I&apos;m obsessed with the placement of colored
-            pixels, engrossed in the creator economy, and intrigued by
-            collecting shiny cardboard.
+            pixels, engrossed in the creator economy, and fascinated by the
+            collectible trading card market.
           </p>
-          <div className="flex gap-6 mt-6">
+          <div className="mt-6 flex gap-6">
             <Link
-              className="p-1 -m-1 group"
+              className="group -m-1 p-1"
               href="https://twitter.com/brfearing"
-              target="blank"
+              target="_blank"
               aria-label="Follow on Twitter"
             >
-              <TwitterIcon className="w-6 h-6 transition group-hover:fill-twitter fill-zinc-500 dark:fill-zinc-400" />
+              <TwitterIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-twitter dark:fill-zinc-400" />
             </Link>
             <SocialLink
               href="https://instagram.com/brandonfearing"
